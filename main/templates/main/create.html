@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+
+<h1>Create Page</h1>
+
+<form method = "POST" action="/create/" class="form-group">
+    
+    {% csrf_token %}
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button type = "submit", name = "save" class="btn btn-success"> Create New Section</button>
+        </div>
+        {{form.name}}
+    </div>
+
+</form>
+
+{% endblock %}
+ 

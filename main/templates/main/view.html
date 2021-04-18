@@ -1,0 +1,15 @@
+{% extends  "main/base.html" %}
+
+{% block title} View {%endblock}
+
+{% block content%}
+    {% for td in user.todolist.all %}
+
+        <div class="form-control">
+
+            <a style="text-decoration: none" href="/{{td.id}}">{{td.name}}</a>
+
+        </div>
+
+    {% endfor %}
+{% endblock %}
